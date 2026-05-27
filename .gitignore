@@ -15,8 +15,8 @@ dist/
 .env
 
 # Data (versionado pelo DVC, não pelo Git)
-data/raw/
-data/processed/
+/data/raw/*.csv
+/data/processed/*.csv
 
 # Models artifacts (versionado pelo MLflow/DVC)
 /models/
