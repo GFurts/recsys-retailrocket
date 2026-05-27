@@ -18,8 +18,8 @@ dist/
 data/raw/
 data/processed/
 
-# Models (versionado pelo MLflow/DVC)
-models/
+# Models artifacts (versionado pelo MLflow/DVC)
+/models/
 
 # MLflow
 mlruns/
