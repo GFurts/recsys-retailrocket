@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+
+# Virtual environments
+.venv/
+venv/
+
+# Poetry
+dist/
+
+# Environment variables (NUNCA commitar)
+.env
+
+# Data (versionado pelo DVC, não pelo Git)
+data/raw/
+data/processed/
+
+# Models (versionado pelo MLflow/DVC)
+models/
+
+# MLflow
+mlruns/
+mlartifacts/
+
+# Jupyter
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+
+# VSCode
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db

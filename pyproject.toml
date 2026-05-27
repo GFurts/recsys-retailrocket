@@ -1,0 +1,42 @@
+[project]
+name = "recsys"
+version = "0.1.0"
+description = "Recommendation system for e-commerce using RetailRocket dataset"
+authors = [
+    {name = "GFurts", email = "gabriel.g.furtado30@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.0.0+cu121",
+    "scikit-learn>=1.3.0",
+    "mlflow>=2.10.0",
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "pydantic-settings>=2.0.0",
+]
+
+[tool.poetry]
+packages = [{include = "recsys", from = "src"}]
+
+[tool.poetry.group.dev.dependencies]
+pytest = ">=7.0.0"
+pytest-cov = ">=4.0.0"
+ruff = ">=0.4.0"
+
+
+[[tool.poetry.source]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu121"
+priority = "supplemental"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
