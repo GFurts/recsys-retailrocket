@@ -1,13 +1,13 @@
 import numpy as np
 
-from recsys.models.factory import ModelFactory
 from recsys.models.base import BaseRecommender
+from recsys.models.factory import ModelFactory
 
 
 @ModelFactory.register("popularity")
 class PopularityRecommender(BaseRecommender):
     """Baseline recommender based on item popularity.
-    
+
     Recommends the most interacted items globally,
     regardless of user history.
     """

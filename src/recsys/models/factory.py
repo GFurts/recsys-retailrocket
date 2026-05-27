@@ -11,9 +11,11 @@ class ModelFactory:
     @classmethod
     def register(cls, name: str):
         """Decorator to register a model class by name."""
+
         def decorator(model_class: type[BaseRecommender]):
             cls._registry[name] = model_class
             return model_class
+
         return decorator
 
     @classmethod

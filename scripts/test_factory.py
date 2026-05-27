@@ -1,5 +1,4 @@
 import numpy as np
-
 from recsys.models import ModelFactory
 
 print("Modelos registrados:", ModelFactory.list_models())
