@@ -6,6 +6,8 @@
 ![DVC](https://img.shields.io/badge/DVC-3.67-green)
 ![Ruff](https://img.shields.io/badge/linting-ruff-purple)
 
+![CI](https://github.com/GFurts/recsys-retailrocket/actions/workflows/ci.yml/badge.svg)
+
 A product recommendation system for e-commerce based on user browsing behavior, using an MLP with PyTorch embeddings.
 
 ## Architecture
