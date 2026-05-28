@@ -10,15 +10,10 @@ A product recommendation system for e-commerce based on user browsing behavior, 
 
 ## Architecture
 
-RetailRocket Dataset
-│
-▼
-┌─────────────┐    ┌──────────────┐    ┌─────────┐    ┌──────────┐
-│ preprocess  │───▶│ feature_eng  │───▶│  train  │───▶│ evaluate │
-└─────────────┘    └──────────────┘    └─────────┘    └──────────┘
-│                  │                 │               │
-events_processed   interaction        recommender    eval_metrics
-.csv            matrix.npz           .pt            .json
+- **preprocess** — filters and encodes RetailRocket events
+- **feature_eng** — builds sparse interaction matrix with event weights  
+- **train** — trains MLP with embeddings and logs to MLflow
+- **evaluate** — computes Precision, Recall, NDCG and Hit Rate @10
 
 ## Stack
 
@@ -31,6 +26,9 @@ events_processed   interaction        recommender    eval_metrics
 
 ## Project Structure
 
+## Project Structure
+
+```
 recsys-retailrocket/
 ├── src/recsys/
 │   ├── config/        # Pydantic Settings
@@ -47,6 +45,7 @@ recsys-retailrocket/
 ├── dvc.yaml           # Reproducible pipeline
 ├── docker-compose.yml # Containerized services
 └── Dockerfile         # Multi-stage build
+```
 
 ## Quick Start
 
