@@ -1,0 +1,82 @@
+schema: '2.0'
+stages:
+  preprocess:
+    cmd: poetry run python src/recsys/data/preprocessor.py
+    deps:
+    - path: data/raw/events.csv
+      hash: md5
+      md5: fddaf7c1c6a9df23a726500a08ffdd7e
+      size: 94237913
+    - path: src/recsys/data/preprocessor.py
+      hash: md5
+      md5: 0a1f5538f2b23d779b6a108bc30bdfdf
+      size: 2119
+    outs:
+    - path: data/processed/events_processed.csv
+      hash: md5
+      md5: 0cf7ecb355592874f014a7ea3f14d871
+      size: 38942838
+  feature_eng:
+    cmd: poetry run python src/recsys/features/feature_engineer.py
+    deps:
+    - path: data/processed/events_processed.csv
+      hash: md5
+      md5: 0cf7ecb355592874f014a7ea3f14d871
+      size: 38942838
+    - path: src/recsys/features/feature_engineer.py
+      hash: md5
+      md5: ca7273401da6b751ebb4cd34ffab72e7
+      size: 2190
+    outs:
+    - path: data/processed/interaction_matrix.npz
+      hash: md5
+      md5: eb61f0c36c94151c68d6d95bd36589af
+      size: 1383226
+    - path: data/processed/user_features.csv
+      hash: md5
+      md5: 1cc898563ffa25cab9b7b6fb24eed76f
+      size: 1218697
+  train:
+    cmd: poetry run python src/recsys/models/train.py
+    deps:
+    - path: data/processed/interaction_matrix.npz
+      hash: md5
+      md5: eb61f0c36c94151c68d6d95bd36589af
+      size: 1383226
+    - path: data/processed/user_features.csv
+      hash: md5
+      md5: 1cc898563ffa25cab9b7b6fb24eed76f
+      size: 1218697
+    - path: src/recsys/models/train.py
+      hash: md5
+      md5: 2062b20ce8870200dc6abee3a847705f
+      size: 6048
+    outs:
+    - path: metrics/train_metrics.json
+      hash: md5
+      md5: 947ce25e8811329b37d199574ab86baa
+      size: 56
+    - path: models/recommender.pt
+      hash: md5
+      md5: 0012027343910d5646424ca8aa5c892b
+      size: 15271920
+  evaluate:
+    cmd: poetry run python src/recsys/evaluation/evaluator.py
+    deps:
+    - path: data/processed/events_processed.csv
+      hash: md5
+      md5: 0cf7ecb355592874f014a7ea3f14d871
+      size: 38942838
+    - path: models/recommender.pt
+      hash: md5
+      md5: 0012027343910d5646424ca8aa5c892b
+      size: 15271920
+    - path: src/recsys/evaluation/evaluator.py
+      hash: md5
+      md5: 4cf28d1fe9262bc3c66300407d3d6120
+      size: 3601
+    outs:
+    - path: metrics/eval_metrics.json
+      hash: md5
+      md5: 547dc8813341405b543b074a42aedfb9
+      size: 159

@@ -35,3 +35,8 @@ notebooks/.ipynb_checkpoints/
 # OS
 .DS_Store
 Thumbs.db
+
+# DVC pipeline outputs (tracked by DVC)
+/data/processed/*.csv
+/data/processed/*.npy
+/metrics/
