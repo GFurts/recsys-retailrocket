@@ -40,3 +40,6 @@ Thumbs.db
 /data/processed/*.csv
 /data/processed/*.npy
 /metrics/
+/data/processed/*.npz
+mlflow.db
+mlruns/
