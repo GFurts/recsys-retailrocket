@@ -46,3 +46,8 @@ mlruns/
 .ruff_cache/
 mlartifacts/
 mlruns/
+
+# Test coverage
+.coverage
+.pytest_cache/
+htmlcov/
