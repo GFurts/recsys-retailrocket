@@ -1,7 +1,8 @@
 """Tests for recommendation models."""
 
 import numpy as np
-import pytest
+import pytest 
+
 from recsys.models import ModelFactory, PopularityRecommender
 from recsys.models.base import BaseRecommender
 

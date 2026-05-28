@@ -1,6 +1,7 @@
 """Tests for data preprocessing module."""
 
 import pandas as pd
+
 from recsys.data.preprocessor import encode_ids, filter_events
 
 
