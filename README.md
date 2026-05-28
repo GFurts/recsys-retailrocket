@@ -26,8 +26,6 @@ A product recommendation system for e-commerce based on user browsing behavior, 
 
 ## Project Structure
 
-## Project Structure
-
 ```
 recsys-retailrocket/
 ├── src/recsys/
@@ -36,9 +34,11 @@ recsys-retailrocket/
 │   ├── features/      # Feature engineering
 │   ├── models/        # MLP, baseline, Factory Pattern
 │   └── evaluation/    # Metrics
+├── configs/           # YAML configuration files
 ├── scripts/           # Utilities and model registration
 ├── tests/             # Automated tests
 ├── docs/              # Model Card
+├── notebooks/         # EDA and exploration
 ├── data/              # DVC-tracked data
 ├── models/            # Trained models
 ├── metrics/           # Experiment metrics
