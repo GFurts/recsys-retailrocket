@@ -43,3 +43,6 @@ Thumbs.db
 /data/processed/*.npz
 mlflow.db
 mlruns/
+.ruff_cache/
+mlartifacts/
+mlruns/
