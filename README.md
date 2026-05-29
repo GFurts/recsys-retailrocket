@@ -109,6 +109,14 @@ poetry run python scripts/register_model.py
 poetry run python scripts/compare_models.py
 ```
 
+## Screenshots
+
+### Training Loss (MLflow)
+![Training Loss](docs/images/mlflow_training.png)
+
+### Model Registry
+![Model Registry](docs/images/mlflow_registry.png)
+
 ## Results
 
 | Metric | Baseline | MLP |
