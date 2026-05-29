@@ -134,10 +134,10 @@ poetry run python scripts/compare_models.py
 
 | Metric | Baseline | MLP |
 |---|---|---|
-| Precision@10 | 0.0046 | 0.0014 |
-| Recall@10 | 0.0053 | 0.0044 |
-| NDCG@10 | 0.0063 | 0.0028 |
-| Hit Rate@10 | 0.0254 | 0.0138 |
+| Precision\@10 | 0.0046 | 0.0014 |
+| Recall\@10 | 0.0053 | 0.0044 |
+| NDCG\@10 | 0.0063 | 0.0028 |
+| Hit Rate\@10 | 0.0254 | 0.0138 |
 
 ## Dataset
 
