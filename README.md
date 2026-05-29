@@ -8,6 +8,8 @@
 
 ![CI](https://github.com/GFurts/recsys-retailrocket/actions/workflows/ci.yml/badge.svg)
 
+![API](https://img.shields.io/badge/API-Live-brightgreen)
+
 A product recommendation system for e-commerce based on user browsing behavior, using an MLP with PyTorch embeddings.
 
 ## Architecture
@@ -116,6 +118,17 @@ poetry run python scripts/compare_models.py
 
 ### Model Registry
 ![Model Registry](docs/images/mlflow_registry.png)
+
+### Live API (Swagger UI)
+![Swagger UI](docs/images/swagger_ui.png)
+
+## Live Demo
+
+- **Swagger UI:** https://recsys-retailrocket.onrender.com/docs
+- **Health check:** https://recsys-retailrocket.onrender.com
+- **Recommendations:** https://recsys-retailrocket.onrender.com/recommend?user_id=0&top_k=10
+
+> Free tier — first request may take ~30s to wake up.
 
 ## Results
 
