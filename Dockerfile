@@ -26,6 +26,7 @@ COPY configs/ ./configs/
 COPY dvc.yaml ./
 COPY .env.example ./.env.example
 COPY start.sh ./
+COPY models/ ./models/
 RUN chmod +x start.sh
 
 ENV PATH="/app/.venv/bin:$PATH"
