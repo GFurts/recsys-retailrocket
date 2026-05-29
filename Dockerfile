@@ -25,8 +25,10 @@ COPY src/ ./src/
 COPY configs/ ./configs/
 COPY dvc.yaml ./
 COPY .env.example ./.env.example
+COPY start.sh ./
+RUN chmod +x start.sh
 
 ENV PATH="/app/.venv/bin:$PATH"
 ENV PYTHONPATH="/app/src"
 
-CMD ["python", "-m", "recsys"]
+CMD ["sh", "start.sh"]
